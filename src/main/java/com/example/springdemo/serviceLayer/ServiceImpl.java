@@ -1,8 +1,6 @@
 package com.example.springdemo.serviceLayer;
 
 import com.example.springdemo.bean.JsonData;
-import org.springframework.context.annotation.Bean;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import java.sql.*;
@@ -67,7 +65,6 @@ public class ServiceImpl implements Servicelevel {
         con.close();
         ps.close();
         return i;
-//return "msg DOne";
     }
 
     @Override
@@ -91,7 +88,6 @@ public class ServiceImpl implements Servicelevel {
         Statement st = con.createStatement();
         PreparedStatement ps = con.prepareStatement("Delete from books where bookno="+id);
         int i=ps.executeUpdate();
-
         ps.close();
         st.close();
         return i;
